@@ -1,1 +1,5 @@
-# Human-Acitivity-Recognition
+1) Since target labels are not highly unbalanced, I have used accuracy (hit ratio) as the parameter across training and test dataset to compare different classifiers. As mentioned in the research paper, SVM is the best classifier with hit ratio of 96.47% and it is observed that sitting has lowest recall of 89% on test dataset. SGDC is next best classifier with hit ratio of 95.76% and even it has lowest recall of 89% for sitting activity on test dataset. KNN has lowest hit ratio of 90.36%. RFC has accuracy of 92.60%. SVM has three hyperparameters to fine tune the model, gamma, cost, and kernel which takes care non-linearity robustly. Thus, it has performed better than other classifiers.
+
+2) KNN and RFC has 100% accuracy on Training set but performed poor on Test set. Thus, we can say that KNN and RFC suffered from overfitting issue. KNN performance was worst as it has only one hyperparameter “K” to fine tune the model, whereas other classifiers have at least two hyperparameters (3 in case of SVM) to fine tune the model.
+
+3) To improve KNN, I think we should add one more hyperparameter. I used “distance” as weights. Maybe we can try another weight as algorithm accepts user-defined weights. For, we can use post-pruning and then compare the performance.
